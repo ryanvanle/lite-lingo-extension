@@ -1,4 +1,4 @@
-# finalproject
+# lite lingo extension
 Getting Started:
 To use this extension we have to follow these steps
 
@@ -11,15 +11,16 @@ Load the extension:
 
 Setup the server:
 
-In the finalproject directory terminal
+In the top directory directory terminal
 1. cd server
 2. run command: "npm install"
-3. run command: "nodemon" or "npm index.js"
+3. If its your first time using it make sure you have postgres install, in index.js, provide your OpenAI key and insert your database connection settings.
+4. run command: "nodemon" or "npm index.js"
 
 Server should be up and check the console if not
 
 Now to use it.
 1. make sure it is in the extensions list
-2. right click on any text and select explain this text for plain text translation,
+2. right click on any text and select explain this text for plain text translation.
 3. see results in the extensions popup, which is done by clicking Lite Lingo in the extension toolbar
-4. on any highlighted text, you can highlight it again, and select "Select this translation" to quickly see all translations as well
+4. on any highlighted text, you can highlight it again, and select "Select this translation" to quickly see all translations as well.
