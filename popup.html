@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Lite Lingo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="popup.js"></script>
+  </head>
+  <body>
+
+    <header id="title">
+      <img class="title-logo" src="img/official logo.png" alt="Lite Lingo Logo, A yellow circle with white oval eyes. The circle is glowing and outlined, with triangles pointing in opposite directions, resembling a radiant sun.">
+      <img class="title-text" src="img/official title.png" alt="Lite Lingo">
+    </header>
+
+    <section id="disclaimer-screen" aria-live="polite">
+      <h1>Disclaimer and Directions</h1>
+      <!-- have to do a wrapper for the scroll-bar -->
+      <section class="text-box-container">
+        <section class="text-box">
+          <h2>Welcome to Lite Lingo, a plain language generator!</h2>
+          <p>This tool uses AI and participant feedback to simplify complex text for better understanding</p>
+          <p>Please Note:</p>
+          <ul>
+            <li>Accuracy Efforts: Aims to be accurate and clear in translations</li>
+            <li>User Discretion: Users are encouraged to be cautious due to possible AI-generated errors. <br> While it is here to help, it might not be perfect in every situation.</li>
+          </ul>
+          <h2>Directions</h2>
+          <ul>
+            <li>Select the text you want to simplify to plain language on the webpage</li>
+            <li>Open the extension and check the translation</li>
+          </ul>
+          <h2>Optional Information</h2>
+          <ul>
+            <li>Access all past translations per webpage</li>
+            <li>Edit the current translation for better accuracy</li>
+          </ul>
+        </section>
+      </section>
+      <section class="horizontal-line"></section>
+      <button id="disclaimer-continue">Continue</button>
+    </section>
+
+    <section id="main-screen" class="hidden" aria-live="polite">
+      <section id="comparison">
+        <section>
+          <h1>Original Text</h1>
+          <section class="text-box-container">
+            <section class="text-box">
+              <p id="original-text">
+                Here is where your selected text will go!
+                <br>
+              </p>
+            </section>
+          </section>
+        </section>
+
+        <section>
+          <h1>Plain Language Text</h1>
+          <section class="text-box-container" id="loading-container">
+            <section class="text-box">
+              <p id="translated-text">
+                No text selected.
+              </p>
+            </section>
+          </section>
+        </section>
+      </section>
+
+      <section class="horizontal-line"></section>
+
+      <section id="main-bottom">
+        <button id="all-trans-btn">
+          View All Translations
+        </button>
+        <button id="edit-plain-btn">
+          Edit Plain Language
+        </button>
+        <button id="show-disclaimer-btn">
+          View Disclaimer
+        </button>
+      </section>
+    </section>
+
+    <section id="all-translation-menu-screen" class="hidden" aria-live="polite">
+      <h1>All Original Text Translations for Current Webpage</h1>
+      <section class="translation-menu-container">
+      </section>
+
+      <section class="horizontal-line"></section>
+
+      <section class="all-translation-bottom-buttons">
+        <button id="all-trans-go-back-btn">Go Back</button>
+        <!-- <button>Select Translation</button> -->
+      </section>
+    </section>
+
+    <section id="all-translation-menu-screen-2" class="hidden" aria-live="polite">
+      <h1>All Translations for Selected Original Text</h1>
+      <h2>Original Text:</h2>
+      <section id="original-text-bubble">
+        <section>
+          <p>User Discretion: Users are encouraged to be cautious due to possible AI-generated errors. User Discretion: Users are encouraged to be cautious due to possible AI-generated errors. User Discretion: Users are encouraged to be cautious due to possible AI-generated errors. User Discretion: Users are encouraged to be cautious due to possible AI-generated errors.</p>
+        </section>
+      </section>
+      <section class="translation-menu-container-2">
+        <section class="translation-menu-card">
+        </section>
+      </section>
+
+      <section class="horizontal-line"></section>
+
+      <section class="all-translation-bottom-buttons">
+        <button id="all-trans-2-go-back-btn">Go Back</button>
+        <!-- <button>Select Translation</button> -->
+      </section>
+
+    </section>
+
+    <section id="edit-screen" class="hidden" aria-live="polite">
+
+      <section id="edit-comparison">
+        <section>
+          <h1>Original Text</h1>
+          <section class="text-box-container">
+            <section class="text-box">
+              <p id="edit-original-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </section>
+          </section>
+        </section>
+
+        <section>
+          <h1>Plain Language Submission</h1>
+          <section class="text-box-container">
+            <section class="text-box">
+              <label for="edit">Edit Plain Language Text</label>
+              <textarea type="text" id="edit-text" name="edit">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </textarea>
+            </section>
+          </section>
+        </section>
+      </section>
+
+      <section class="horizontal-line"></section>
+
+      <section class="all-translation-bottom-buttons">
+        <button id="edit-go-back-btn">Go Back</button>
+        <button id="revert">Revert Changes to Initial State</button>
+        <button id="submit">Submit New Submission</button>
+      </section>
+
+    </section>
+
+  </body>
+</html>
