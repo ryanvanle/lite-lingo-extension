@@ -7,17 +7,17 @@ Load the extension:
 2. Go to chrome://extensions/
 3. Turn on "Developer mode"
 4. Click on "Load Unpacked"
-5. Select the folder containing the json file
+5. Select the folder containing the json file.
 
 Setup the server:
 
-In the top directory directory terminal
+In the top directory directory terminal:
 1. cd server
 2. run command: "npm install"
 3. If its your first time using it make sure you have postgres install, in index.js, provide your OpenAI key and insert your database connection settings.
 4. run command: "nodemon" or "npm index.js"
 
-Server should be up and check the console if not
+Server should be up and check the console if not.
 
 Now to use it.
 1. make sure it is in the extensions list
